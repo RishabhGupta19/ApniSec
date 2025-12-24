@@ -44,6 +44,7 @@ The backend is built using a **strict Object-Oriented Programming (OOP) architec
 - Password reset success notification
 - Profile updated notification
 - Issue creation notification
+- ** Please check the spam folder if mail not found**
 
 ### 🔍 Search & Filters
 - Full-text search (regex based)
