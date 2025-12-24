@@ -116,7 +116,7 @@ FRONTEND_URL=http://localhost:8080
 
 🚀 Setup Instructions
 1️⃣ Clone the repository
-git clone https://github.com/your-username/apnisec.git
+git clone https://github.com/RishabhGupta19/ApniSec
 cd apnisec
 
 2️⃣ Backend Setup
