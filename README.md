@@ -1,8 +1,9 @@
 # 🔐 ApniSec – Security Issue Management Platform
 
-ApniSec is a full-stack security issue tracking platform that allows users to register, authenticate, create, manage, and track security issues (Cloud Security, VAPT, Red Team, etc.) with proper authentication, authorization, email notifications, and search/filter capabilities.
+ApniSec is a full-stack security issue tracking platform that allows users to register, authenticate, create, manage, and track security issues (Cloud Security, VAPT, Red Team, etc.) with proper authentication, authorization, email notifications, and advanced search/filter capabilities.
 
-This project is built with a **clean backend architecture**, secure authentication, and a modern frontend UI.
+The backend is built using a **strict Object-Oriented Programming (OOP) architecture** following **SOLID principles**, with clear separation of concerns across Controllers, Services, Repositories, Validators, and Middleware. The application uses secure authentication mechanisms and a modern, responsive frontend UI for an end-to-end production-ready experience.
+
 
 ---
 
@@ -51,7 +52,143 @@ This project is built with a **clean backend architecture**, secure authenticati
 
 ---
 
-## 🧠 Project Architecture
 
-### Backend Architecture (Layered + OOP)
+✔ Centralized API service  
+✔ Global auth state via Context  
+✔ Protected routes  
+✔ Reusable UI components  
 
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- React Router
+- Context API
+- Fetch API
+
+### Backend
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB + Mongoose
+- JWT (jsonwebtoken)
+- bcrypt
+- Resend (Email service)
+
+### Tools & DevOps
+- MongoDB Atlas
+- Postman
+- Nodemon
+- ESLint
+- dotenv
+
+---
+
+## 🔐 Security Practices Implemented
+
+- Password hashing (bcrypt)
+- JWT authentication
+- Token expiry handling
+- Protected API routes
+- User-scoped data access (no cross-user access)
+- Reset token validation + expiry
+- Server-side filtering (no client trust)
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (`.env`)
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRES_IN=1d
+
+RESEND_API_KEY=your_resend_api_key
+EMAIL_FROM=no-reply@rishabhs.xyz
+FRONTEND_URL=http://localhost:8080
+
+🚀 Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/your-username/apnisec.git
+cd apnisec
+
+2️⃣ Backend Setup
+cd Backend
+npm install
+npm run build
+npm run start
+
+3️⃣ Frontend Setup
+cd Frontend
+npm install
+npm run dev
+
+4️⃣ Access the app
+Frontend → http://localhost:8080
+Backend  → http://localhost:5000
+
+🔁 API Overview
+Auth
+
+POST /api/auth/register
+
+POST /api/auth/login
+
+GET /api/auth/me
+
+POST /api/auth/forgot-password
+
+POST /api/auth/reset-password
+
+User
+
+GET /api/users/profile
+
+PUT /api/users/profile
+
+PUT /api/users/change-password
+
+Issues
+
+GET /api/issues
+
+POST /api/issues
+
+GET /api/issues/:id
+
+PUT /api/issues/:id
+
+DELETE /api/issues/:id
+
+📬 Email Events
+
+User registered → Welcome email
+
+Forgot password → Reset link email
+
+Password reset success → Confirmation email
+
+Profile updated → Notification email
+
+Issue created → Issue details email
+
+🧪 Status
+
+✔ Authentication complete
+✔ Issue management complete
+✔ Email integration complete
+✔ Search & filters working
+✔ Ready for deployment
+
+👤 Author
+
+Rishabh Gupta
+Full-Stack Developer
+Domain: https://rishabhs.xyz
