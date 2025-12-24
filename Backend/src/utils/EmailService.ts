@@ -96,7 +96,7 @@ export class EmailService {
         </p>
       </div>
       <div style="text-align: center; margin-top: 30px;">
-        <a href="http://localhost:8080/dashboard" style="display: inline-block; background-color: #667eea; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 15px;">
+        <a href="https://apnisec-qt9c.onrender.com/dashboard" style="display: inline-block; background-color: #667eea; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 15px;">
           Go to Dashboard
         </a>
       </div>
@@ -111,7 +111,7 @@ export class EmailService {
 
   // ✅ Password reset email
   static async reset(email: string, token: string) {
-    const resetUrl = `http://localhost:8080/reset-password?token=${token}`;
+    const resetUrl = `https://apnisec-qt9c.onrender.com/reset-password?token=${token}`;
     
     const content = `
       <div style="text-align: center; margin-bottom: 30px;">
