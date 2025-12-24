@@ -27,3 +27,6 @@ app.use("/api/issues", issueRoutes);
 app.use("/api/auth", auth);
 
 app.use(ErrorHandler.handle);
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
