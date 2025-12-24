@@ -73,7 +73,7 @@ export class EmailService {
     `;
   }
 
-  // ✅ Welcome email
+  //  Welcome email
   static async welcome(email: string) {
     const content = `
       <div style="text-align: center; margin-bottom: 30px;">
@@ -96,7 +96,7 @@ export class EmailService {
         </p>
       </div>
       <div style="text-align: center; margin-top: 30px;">
-        <a href="https://apnisec-qt9c.onrender.com/dashboard" style="display: inline-block; background-color: #667eea; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 15px;">
+        <a href="https://apni-sec-omega.vercel.app/dashboard" style="display: inline-block; background-color: #667eea; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 15px;">
           Go to Dashboard
         </a>
       </div>
@@ -109,9 +109,9 @@ export class EmailService {
     });
   }
 
-  // ✅ Password reset email
+  //  Password reset email
   static async reset(email: string, token: string) {
-    const resetUrl = `https://apnisec-qt9c.onrender.com/reset-password?token=${token}`;
+    const resetUrl = `https://apni-sec-omega.vercel.app/reset-password?token=${token}`;
     
     const content = `
       <div style="text-align: center; margin-bottom: 30px;">
@@ -147,7 +147,7 @@ export class EmailService {
     });
   }
 
-  // ✅ Issue created email
+  //  Issue created email
   static async issueCreated(
     email: string,
     issue: {
@@ -208,7 +208,7 @@ export class EmailService {
     });
   }
 
-  // ✅ Profile updated email
+  //  Profile updated email
   static async profileUpdated(email: string) {
     const content = `
       <div style="text-align: center; margin-bottom: 30px;">
