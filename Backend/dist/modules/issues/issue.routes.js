@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { IssueController } from "./IssueController.js";
+import { AuthMiddleware } from "../../core/middleware/AuthMiddleware.js";
+const router = Router();
+const controller = new IssueController();
+router.use(AuthMiddleware.protect);
+router.post("/", controller.create);
+router.get("/", controller.list);
+router.get("/:id", controller.get);
+router.put("/:id", controller.update);
+router.delete("/:id", controller.delete);
+export default router;

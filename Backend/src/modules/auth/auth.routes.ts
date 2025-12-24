@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { AuthController } from "./AuthController.js";
+import { AuthMiddleware } from "../../core/middleware/AuthMiddleware.js";
+const r = Router();
+const c = new AuthController();
+
+r.post("/register", c.register);
+r.post("/login", c.login);
+r.post("/forgot-password", c.forgot);
+r.post("/reset-password", c.reset);
+r.get("/me", AuthMiddleware.protect, c.me);
+export default r;
