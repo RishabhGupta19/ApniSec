@@ -25,7 +25,7 @@ import type {
    CONFIG
 ============================================ */
 
-const BASE_URL = "https://apnisec-qt9c.onrender.com/api";
+const BASE_URL = "https://apnisec-amhw.onrender.com";
 
 /* ============================================
    HELPERS
